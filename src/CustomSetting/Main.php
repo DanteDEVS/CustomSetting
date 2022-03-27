@@ -23,13 +23,13 @@ class Main extends PluginBase implements Listener {
 	/**
 	 * @param DataPacketReceiveEvent $event
 	 */
-	public function onDataPacket(NetworkSession $event) {
+	public function onDataPacket(DataPacketReceiveEvent $event) {
 		$packet = $event->getPacket();
 		if($packet instanceof ServerSettingsRequestPacket) {
 			$packet = new ServerSettingsResponsePacket();
 			$packet->formData = file_get_contents($this->getDataFolder() . "Setting.json");
 			$packet->formId = 5928;
-			$event->getPlayer()->dataPacket($packet);
+			$event->getOrigin()->dataPacket($packet);
 		} elseif($packet instanceof ModalFormResponsePacket) {
 			$formId = $packet->formId;
 			if($formId !== 5928) {
