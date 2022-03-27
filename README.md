@@ -1,5 +1,6 @@
 # CustomSetting
 This Plugin gives you a setting page for your Server :)
+This does atepmt to add PM4 SUPPORT!
  ## Credit to nikipuh
  Go check them out here @ https://github.com/nikipuh
 # Poggit Links & Stats
