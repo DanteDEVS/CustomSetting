@@ -7,7 +7,6 @@ use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 use pocketmine\network\mcpe\protocol\ServerSettingsRequestPacket;
 use pocketmine\network\mcpe\protocol\ServerSettingsResponsePacket;
-use pocketmine\network\mcpe\NetworkSession;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
