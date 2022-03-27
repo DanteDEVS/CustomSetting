@@ -7,6 +7,7 @@ use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 use pocketmine\network\mcpe\protocol\ServerSettingsRequestPacket;
 use pocketmine\network\mcpe\protocol\ServerSettingsResponsePacket;
+use pocketmine\network\mcpe\NetworkSession;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
@@ -22,7 +23,7 @@ class Main extends PluginBase implements Listener {
 	/**
 	 * @param DataPacketReceiveEvent $event
 	 */
-	public function onDataPacket(DataPacketReceiveEvent $event) {
+	public function onDataPacket(NetworkSession $event) {
 		$packet = $event->getPacket();
 		if($packet instanceof ServerSettingsRequestPacket) {
 			$packet = new ServerSettingsResponsePacket();
