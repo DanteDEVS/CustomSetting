@@ -12,7 +12,7 @@ use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener {
 
-	public function onEnable() {
+	public function onEnable(): void{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		if(!is_dir($this->getDataFolder())) {
 			mkdir($this->getDataFolder());
