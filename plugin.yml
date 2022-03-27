@@ -1,6 +1,6 @@
 ---
 name: CustomSetting
-version: 1.0.1
+version: 1.0.1-PM4
 api: 4.0.0
 main: CustomSetting\Main
 author: [LeNick, DanteDev]
